@@ -1,0 +1,89 @@
+/* pages/shopcart/shopcart.wxss */
+
+.cart-phonenum{
+  text-align: right;
+}
+
+.coupons {
+  box-sizing: border-box;
+}
+
+.user-coupons-text {
+  color: red;
+  text-align: right;
+}
+
+.cart-shop-list {
+  margin-bottom: 200rpx;
+}
+
+.cart-shop-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.cart-shop-title {
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.cart-shop-select-info{
+  font-size: 24rpx;
+  color: rgb(24, 39, 241);
+}
+.cart-shop-price{
+  font-size: 24rpx;
+  color: red;
+}
+.cart-count-option{
+  align-items: right;
+    font-size: 24rpx;
+    border:  darkgray solid 1rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+
+}
+
+.bottom-pay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.total-count-money {
+  
+  padding: 20rpx;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+}
+
+
+
+
+.btn-area-button {
+  text-align: center;
+      background-size:100% 100%;
+    background-color: royalblue;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 0 hsla(0,0%,0%,.25),
+                0 0 5px hsla(0,0%,0%,.25);
+    color: hsla(0,0%,0%,.75);
+    cursor: pointer;
+    font: bold 16px/1 sans-serif;
+    padding: 10px 25px 15px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+.btn-area-button:hover,
+.btn-area-button:focus {
+    box-shadow: inset 0 -6px 0 hsla(0,0%,0%,.25),
+                0 0 6px hsla(0,0%,0%,.25);
+    margin-top: -1px;
+    padding-bottom: 16px;
+}
+.btn-area-button:active {
+    box-shadow: inset 0 -2px 0 hsla(0,0%,0%,.25),
+                0 0 2px hsla(0,0%,0%,.25);
+    margin-top: 3px;
+    padding-bottom: 12px;
+}

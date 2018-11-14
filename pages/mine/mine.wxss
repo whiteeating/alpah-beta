@@ -1,0 +1,155 @@
+/* pages/mine/mine.wxss */
+.userinfo{
+ display: flex;
+  
+  align-items: center;
+  font-size: left;
+  
+  background-size:100% 100%;
+  background-image:url("https://img2018.cnblogs.com/blog/1476496/201811/1476496-20181110170850957-946890645.jpg") ;
+}
+.a_vatarurl{
+ 
+width: 50px;
+height: 50px;
+border-radius: 25px;
+padding-left: 30px;
+padding-bottom: 40px;
+padding-top: 30px;
+padding-right: 15px;
+}
+
+.btn {
+  text-align: left;
+  font-size:medium;
+  
+}
+.btn2 {
+  text-align: left;
+  font-size: medium;
+}
+.btn3 {
+    text-align: left;
+  font-size: medium;
+ 
+}
+
+
+.press {
+  text-align: left;
+      background-size:100% 100%;
+    background-image:url("https://img2018.cnblogs.com/blog/1476496/201811/1476496-20181110204344260-1251773260.png");
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 0 hsla(0,0%,0%,.25),
+                0 0 5px hsla(0,0%,0%,.25);
+    color: hsla(0,0%,0%,.75);
+    cursor: pointer;
+    font: bold 16px/1 sans-serif;
+    padding: 10px 25px 15px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+.press:hover,
+.press:focus {
+    box-shadow: inset 0 -6px 0 hsla(0,0%,0%,.25),
+                0 0 6px hsla(0,0%,0%,.25);
+    margin-top: -1px;
+    padding-bottom: 16px;
+}
+.press:active {
+    box-shadow: inset 0 -2px 0 hsla(0,0%,0%,.25),
+                0 0 2px hsla(0,0%,0%,.25);
+    margin-top: 3px;
+    padding-bottom: 12px;
+}
+
+.press1 {
+  text-align: left;
+      background-size:100% 100%;
+    background-image:url("https://img2018.cnblogs.com/blog/1476496/201811/1476496-20181110204344260-1251773260.png");
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 0 hsla(0,0%,0%,.25),
+                0 0 5px hsla(0,0%,0%,.25);
+    color: hsla(0,0%,0%,.75);
+    cursor: pointer;
+    font: bold 16px/1 sans-serif;
+    padding: 10px 25px 15px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+.press1:hover,
+.press1:focus {
+    box-shadow: inset 0 -6px 0 hsla(0,0%,0%,.25),
+                0 0 6px hsla(0,0%,0%,.25);
+    margin-top: -1px;
+    padding-bottom: 16px;
+}
+.press1:active {
+    box-shadow: inset 0 -2px 0 hsla(0,0%,0%,.25),
+                0 0 2px hsla(0,0%,0%,.25);
+    margin-top: 3px;
+    padding-bottom: 12px;
+}
+.press2 {
+  text-align: left;
+  background-size:100% 100%;
+    background-image:url("https://img2018.cnblogs.com/blog/1476496/201811/1476496-20181110204344260-1251773260.png");
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 0 hsla(0,0%,0%,.25),
+                0 0 5px hsla(0,0%,0%,.25);
+    color: hsla(0,0%,0%,.75);
+    cursor: pointer;
+    font: bold 16px/1 sans-serif;
+    padding: 10px 25px 15px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+.press2:hover,
+.press2:focus {
+    box-shadow: inset 0 -6px 0 hsla(0,0%,0%,.25),
+                0 0 6px hsla(0,0%,0%,.25);
+    margin-top: -1px;
+    padding-bottom: 16px;
+}
+.press2:active {
+    box-shadow: inset 0 -2px 0 hsla(0,0%,0%,.25),
+                0 0 2px hsla(0,0%,0%,.25);
+    margin-top: 3px;
+    padding-bottom: 12px;
+}
+
+.press3 {
+ 
+  text-align: center;
+  
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -5px 0 hsla(0,0%,0%,.25), 
+                0 0 5px hsla(0,0%,0%,.25);
+    color: rgb(25, 112, 7);
+    cursor: pointer;
+    font: bold 16px/1 sans-serif;
+    padding: 10px 25px 15px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+    
+}
+.press3:hover,
+.press3:focus {
+    box-shadow: inset 0 -6px 0 hsla(0,0%,0%,.25),
+                0 0 6px hsla(0,0%,0%,.25);
+    margin-top: -1px;
+    padding-bottom: 16px;
+}
+.press3:active {
+    box-shadow: inset 0 -2px 0 hsla(0,0%,0%,.25),
+                0 0 2px hsla(0,0%,0%,.25);
+    margin-top: 3px;
+    padding-bottom: 12px;
+}
+
+
+
