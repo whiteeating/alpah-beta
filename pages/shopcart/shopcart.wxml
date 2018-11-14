@@ -1,0 +1,53 @@
+
+<view>
+
+ 
+  
+  <view>
+    <button class="btn-area-button" bindtap="backtochoose" type="primary">重新拍照</button>
+  </view>
+
+ 
+
+  
+  <view class="separate"></view>
+
+  <view class="cart-shop-list">
+
+    <!--购物车商品列表 bindtap = "onItemClick"-->
+    <view wx:for="{{cartShopList}}">
+      <view class="ui-flex ui-padding-10" data-item-index = "{{index}}" >
+        <view>
+          <image class="cart-shop-img" src="{{item.shopImg}}"></image>
+        </view>
+        <view class="ui-pl-10 ui-pr-10">
+          <view>
+            <text class="cart-shop-title">{{item.shopTitle}}</text>
+          </view>
+          <view>
+            <text class="cart-shop-select-info ui-pt-10">{{item.shopSelectInfo}}</text>
+          </view>
+          <view class="ui-flex ui-pt-10">
+            <text class="cart-shop-price ui-width-20">￥{{item.shopPrice}}</text>
+            <view class="ui-width-80 ui-flex ui-flex-end ">
+              <view class="cart-count-option" data-index = "{{index}}" bindtap = "itemCountSub">-</view>
+              <view class="cart-count-option">
+                {{item.shopCount}}
+              </view>
+              <view class="cart-count-option" data-index = "{{index}}"  bindtap = "itemCountAdd">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+  <view class="bottom-pay">
+    <view class="total-count-money">总计:￥{{allPrice}}元 </view>
+    <view>
+      <button class="btn-area-button" bindtap="goToPay" type="warn">去支付</button>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
