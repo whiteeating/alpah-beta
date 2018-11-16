@@ -1,0 +1,125 @@
+#title{
+	position: absolute;
+	width: 30%;
+	height: 20%;
+	left: 35%;
+	top: 20%;
+	display: flex;
+	align-items: flex-start;
+}
+
+#title span{
+	display: flex;
+	align-items: center;
+	width: 15%;
+	height: 25px;
+	line-height: 25px;
+}
+
+#title textarea{
+	width: 85%;
+	height: 100%;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	resize: none;
+	font-size: 15px;
+}
+
+#label{
+	position: absolute;
+	width: 30%;
+	height: 20%;
+	left: 35%;
+	top: 45%;
+	display: flex;
+	align-items: flex-start;
+}
+
+#label span{
+	display: flex;
+	align-items: center;
+	width: 15%;
+	height: 25px;
+	line-height: 25px;
+}
+
+#label select{
+	width: 25%;
+	border: 1px solid #ccc;
+	font-size: 15px;
+	line-height: 15px;
+}
+
+#answer{
+	position: absolute;
+	width: 30%;
+	height: 30%;
+	/*height: 20%;*/
+	left: 35%;
+	top: 52%;
+	display: flex;
+	align-items: flex-start;
+}
+
+#answer span{
+	display: flex;
+	align-items: center;
+	width: 15%;
+	height: 25px;
+	line-height: 25px;
+}
+
+#answer textarea{
+	width: 85%;
+	height: 100%;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	resize: none;
+	font-size: 15px;
+}
+
+#submit{
+	position: absolute;
+	width: 30%;
+	/*height: 20%;*/
+	left: 35%;
+	top: 60%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+#submit a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 27px;
+	line-height: 25px;
+	text-decoration: none;
+	border-radius: 10px;
+	background: #2BD52B;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#header{
+	position: absolute;
+	width: 30%;
+	/*height: 20%;*/
+	left: 35%;
+	top: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 35px;
+}
+
+#table{
+	position: absolute;
+	width: 30%;
+	height: 70%;
+	right: 2%;
+	top: 5%;
+}

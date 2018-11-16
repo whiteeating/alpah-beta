@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="./css/index.css?t=1" />
+		<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" />
+		<script type="text/javascript" src="./lib/jquery-3.3.1/jquery-3.3.1.js?t=1"></script>
+		<title>录入菜品</title>
+	</head>
+
+	<body>
+		<form id="form" action="./api.php" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="op" value="addquestion">
+			<div id="header">题目录入</div>
+			<div id="title">
+				<span>菜品英文名:</span>
+				<textarea name="title"></textarea>
+			</div>
+			<div id="ctitle">
+				<span>菜品中文名:</span>
+				<textarea name="title"></textarea>
+			</div>
+			<div id="answer">
+				<span>答案:</span>
+				<!--<textarea name="answer"></textarea>-->
+				<input type="file" name="answer">
+			</div>
+			<div id="submit">
+				<a href="#" onclick="$('#form').submit();window.reload()">提交</a>
+			</div>
+		</form>
+		<div id="table" style="overflow-x: hidden;overflow-y: auto;border: 1px solid #ccc;">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>题目</th>
+						<th>答案</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						$res=$conn->query("select * from question");
+						while($row=$res->fetch_assoc()){
+							echo "<tr>";
+							echo "<td style='height: 100px;'><textarea style='border: none;resize: none;width: 100%;height:100%;'>{$row['title']}</textarea></td>";
+							echo "<td style='height: 100px;'><img style='height:100%;width:200px' src='http://47.106.227.33/api/upload/question/"."{$row['answer']}'></td>";
+							echo "<td align='center' style='vertical-align: middle;'><a href='./api.php?op=delquestion&id={$row['id']}'>删除</a></td>";
+							echo "</tr>";
+						}
+					?>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>
