@@ -1,0 +1,124 @@
+/* pages/setting/setting.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #efefef;
+}
+.header{
+    position: relative;
+    height: 160rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: #f6dc34;
+    font-size: 28rpx;
+    color: #fff;
+}
+.header .thumb{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.header .about{
+    float: right;
+}
+.address-box{
+    color: #999;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    border-top: 20rpx solid #f2f2f2;
+}
+.address-box .address-manage{
+    background-color: white;
+    position: relative;
+    height: 90rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+    text-align: center;
+}
+
+.shop-info {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ffffff;
+}
+.shop-info .shop-info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-info .shop-info-left .item {
+  height: 90rpx;
+  display: flex;
+  font-size:80%;
+  align-items: center;
+  width: 535rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.shop-info .shop-info-left .item:last-child {
+  border: none; 
+}
+.shop-info .shop-info-left .item .title {
+  letter-spacing:0.8em;
+}
+.shop-info .shop-info-left .item image{
+  width: 34rpx;
+  height: 33rpx;
+  margin-right: 10rpx;
+}
+.shop-info .shop-info-left .item text {
+  padding-left: 20rpx;
+}
+.shop-info .shop-info-left .item .discount {
+  padding-left: 40rpx;
+}
+.shop-info .shop-info-left .item .item-half {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.shop-info .shop-info-right {
+  width: 185rpx;
+  display: flex;
+  flex-direction: column;
+}
+.shop-info .shop-info-right2 {
+  width: 185rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcd602;
+}
+.shop-info .shop-info-right2 image {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 30rpx;
+}
+.shop-info .shop-info-right2 .open {
+  color: #ffffff;
+}
+
+.shop-info .shop-info-right view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+.shop-info .shop-info-right .rest{
+
+  background-color: #e6eaf4;
+}
+.shop-info .shop-info-right .close{
+  background-color: #6493fe;
+}
+.shop-info .shop-info-right .close{
+  background-color: #6493fe;
+}

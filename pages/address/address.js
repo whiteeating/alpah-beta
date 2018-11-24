@@ -1,130 +1,119 @@
-// pages/address/address.js
-var city = require('../../utils/city.js')
-var detailedInfo;
-var consigneeName;
-var phoneNum;
-var address = {};
-var addressList = [
-];
+// pages/setting/setting.js
 Page({
-  data: {
-    provinceList: [],
-    cityList: [],
-    districtList: [],
-    indexProvince: 0,
-    indexCity: 0,
-    indexDistrict: 0,
-    isChecked: false,
-  },
-  //改变省
-  provinceChange: function (e) {
-    this.setData({
-      indexProvince: e.detail.value,
-      indexCity: 0,
-      indexDistrict: 0,
-    });
-    //改变市和区
-    this.setData({
-      cityList: city.getCity(this.data.provinceList[this.data.indexProvince])
-    });
-    this.setData({
-      districtList: city.getArea(this.data.provinceList[this.data.indexProvince], this.data.cityList[this.data.indexCity])
-    });
-  },
-  //改变市
-  cityChange: function (e) {
-    this.setData({
-      indexCity: e.detail.value,
-      indexDistrict: 0,
-    });
-    //改变区
-    this.setData({
-      districtList: city.getArea(this.data.provinceList[this.data.indexProvince], this.data.cityList[this.data.indexCity])
-    });
-  },
-  //改变区区/县
-  districtChange: function (e) {
-    this.setData({
-      indexDistrict: e.detail.value,
-    });
-  },
-  /**
-   * 获取详细地址
-   */
-  getAddressInfo: function (e) {
-    detailedInfo = e.detail.value;
-    console.log("detailedInfo:" + detailedInfo);
-  },
-  /**
-   * 获取联系人名称
-   */
-  getConsigneeName: function (e) {
-    consigneeName = e.detail.value;
-    console.log("consigneeName:" + consigneeName);
-  },
-  /**
- * 获取联系人电话
- */
-  getPhoneNum: function (e) {
-    phoneNum = e.detail.value;
-    console.log("phoneNum:" + phoneNum);
-  },
 
-  //选择默认地址
-  checkboxChange: function (e) {
-    this.setData({
-      isChecked: !this.data.isChecked
-    });
-    for (var key in addressList) {
-      addressList[key].isDefult = false;
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    address: {
+    name: '',
+    shopname:'',
+    phone: ''
     }
   },
 
   /**
-   * 点击添加地址
+   * 生命周期函数--监听页面加载
    */
-  addNewAdress: function (e) {
+  onLoad: function (options) {
+    var self = this;
 
-    address.province = this.data.provinceList[this.data.indexProvince];
-    address.city = this.data.cityList[this.data.indexCity];
-    address.district = this.data.districtList[this.data.indexDistrict];
-    address.detailedInfo = detailedInfo;
-    address.consigneeName = consigneeName;
-    address.phoneNum = phoneNum;
-    address.isDefult = this.data.isChecked;
-    addressList.push(address);
-
-    wx.setStorageSync('address', addressList)
-    wx.navigateBack({
-      delta: 1, // 回退前 delta(默认为1) 页面
+    wx.getStorage({
+      key: 'address',
+      success: function (res) {
+        self.setData({
+          address: res.data
+        })
+      }
+    })
+  },
+    formSubmit() {
+    var self = this;
+    if (self.data.address.name && self.data.address.phone && self.data.address.detail) {
+      wx.setStorage({
+        key: 'address',
+        data: self.data.address,
+        success() {
+          wx.showModal({
+            title: '提示',
+            content: '修改成功！',
+            showCancel: false
+          })
+        }
+      })
+      wx.navigateBack();
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '请填写完整资料',
+        showCancel: false
+      })
+    }
+  },
+  bindName(e) {
+    this.setData({
+      'address.name': e.detail.value
+    })
+  },
+  bindShop(e) {
+    this.setData({
+      'address.shopname': e.detail.value
+    })
+  }, 
+  bindPhone(e) {
+    this.setData({
+      'address.phone': e.detail.value
     })
   },
 
 
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-    this.setData({
-      provinceList: city.getProvince()
-    });
-    this.setData({
-      cityList: city.getCity(this.data.provinceList[this.data.indexProvince])
-    });
-    this.setData({
-      districtList: city.getArea(this.data.provinceList[this.data.indexProvince], this.data.cityList[this.data.indexCity])
-    });
-    addressList = wx.getStorageSync('address').length > 0 ? wx.getStorageSync('address') : [];
-  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
   onReady: function () {
-    // 页面渲染完成
 
   },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
   onShow: function () {
-    // 页面显示
+
   },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
   onHide: function () {
-    // 页面隐藏
+
   },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
   onUnload: function () {
-    // 页面关闭
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

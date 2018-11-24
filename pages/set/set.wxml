@@ -1,0 +1,65 @@
+<!--pages/setting/setting.wxml-->
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+    </view>
+        <view class="shop-info">
+        <view class="shop-info-left">
+            <view class="item">
+                <view class="item-half">
+                    <image src="/image/33shouye.png"></image>
+                    <view class="title f2 c4">商品</view>
+                    <text class="f2 c4">20</text>
+                </view>
+                <view class="item-half">
+                    <image src="/image/34shouye.png"></image>
+                    <view class="title f2 c4">订单</view>
+                    <text class="f2 c4">567</text>
+                </view>
+            </view>
+            <view class="item">
+                <view class="item-half">
+                    <image src="/image/35shouye.png"></image>
+                    <view class="title f2 c4">关注</view>
+                    <text class="f2 c4">20</text>
+                </view>
+                <view class="item-half">
+                    <image src="/image/36shouye.png"></image>
+                    <view class="title f2 c4">热度</view>
+                    <text class="f2 c4">4</text>
+                </view>
+            </view>
+            <view class="item">
+                <view class="item-half">
+                    <image src="/image/37shouye.png"></image>
+                    <view class="f2 c4">优惠券</view>
+                    <text class="discount f2 c4">已领20/剩余80/一共100</text>
+                </view>
+            </view>
+        </view>
+        <view class="shop-info-right {{shopOpened ? 'hide' : ''}}">
+            <view class="rest" bindtap="rest">休息</view>
+            <view class="close" bindtap="close">打烊</view>
+        </view>
+
+      <view bindtap="openShop" class="shop-info-right2 {{!shopOpened ? 'hide' : ''}}">
+            <image src="/image/38shouye.png"></image>
+            <view class="open">开张</view>
+        </view>
+        
+    </view>
+    <view class="blank"></view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/address/address">信息管理</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/contact/contact">联系客服</navigator>
+        </view>
+    </view>
+
+
+</view>

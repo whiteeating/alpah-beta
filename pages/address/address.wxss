@@ -1,28 +1,23 @@
-/* pages/address/address.wxss */
-.picker-select{
-    border: darkgray solid 1rpx;
+/* pages/setting/setting.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.select-img{
-    width: 24rpx;
-    height: 14rpx;
-    align-self:center;
-      -webkit-align-self: center;
+.form-box{
+    padding-left: 30rpx;
+    background-color: white;
 }
-.input-address{
-    border: darkgray solid 1rpx;
-    margin-top: 20rpx;
-    padding: 10rpx;
-    width: 705rpx;
-
+.form-box input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    font-size: 28rpx;
+    color: #999;
 }
-
-.defult-address{
-    padding: 20rpx 10rpx;
+.form-box .input-placeholder{
+    color: #aaa;
 }
-
-.chk-defult{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
+.form-box button{
+    margin:30rpx 30rpx 0 0;
+    background-color: white;
 }
